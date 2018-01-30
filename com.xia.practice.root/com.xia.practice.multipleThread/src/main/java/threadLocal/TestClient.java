@@ -2,6 +2,8 @@ package threadLocal;
 
 /**
  * Created by Lee on 2018/1/24.
+ *
+ *
  */
 public class TestClient extends Thread {
 

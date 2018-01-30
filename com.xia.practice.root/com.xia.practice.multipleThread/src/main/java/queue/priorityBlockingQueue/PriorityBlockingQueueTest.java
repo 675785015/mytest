@@ -1,6 +1,7 @@
-package queue;
+package queue.priorityBlockingQueue;
 
-import java.util.PriorityQueue;
+import queue.priorityBlockingQueue.Task;
+
 import java.util.concurrent.PriorityBlockingQueue;
 
 /**

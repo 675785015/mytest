@@ -1,6 +1,4 @@
-package queue;
-
-import java.util.Comparator;
+package queue.priorityBlockingQueue;
 
 /**
  * Created by Lee on 2018/1/29.

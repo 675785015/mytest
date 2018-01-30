@@ -28,6 +28,7 @@ public class SynchronousQueueTest {
 
         @Override
         public void run(){
+            System.out.println("生产者开始");
             while(true){
                 int i = new Random().nextInt(1000);
                 System.out.println("生产一个随机数："+i);
@@ -59,7 +60,7 @@ public class SynchronousQueueTest {
         }
         @Override
         public void run(){
-
+            System.out.println("消费者开始");
             while (true){
                 try {
                     System.out.println("消费者取出:"+queue.take());
