@@ -13,6 +13,7 @@ public class Test {
         System.out.println("去执行其他操作");
         String resp = data.getData();
 
+        System.out.println("当前线程数："+Runtime.getRuntime().availableProcessors());
 
         System.out.println(resp);
     }
