@@ -26,10 +26,21 @@ public class TestMySyn {
 
     public static void main(String[] args) {
 
+        final ObjectLock objectLock = new ObjectLock();
 // TODO Auto-generated method stub
 
-        Thread t1 = new Thread(new MyRunnable(new TestSyn()));
-        Thread t2 = new Thread(new MyRunnable(new TestSyn()));
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                objectLock.method3();
+            }
+        });
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                objectLock.method3();
+            }
+        });
 
         t1.start();
         t2.start();
