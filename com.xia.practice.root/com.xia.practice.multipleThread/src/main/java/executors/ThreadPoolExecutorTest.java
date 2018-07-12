@@ -12,8 +12,8 @@ public class ThreadPoolExecutorTest {
         ExecutorService executorService =
 //                Executors.newFixedThreadPool(3);    //LinkedBlockingQueue<Runnable>
 //                Executors.newCachedThreadPool();      //SynchronousQueue<Runnable>
-//                  Executors.newSingleThreadExecutor();  //LinkedBlockingQueue<Runnable>
-        Executors.newScheduledThreadPool(3);    //DelayedWorkQueue
+                  Executors.newSingleThreadExecutor();  //LinkedBlockingQueue<Runnable>
+//        Executors.newScheduledThreadPool(3);    //DelayedWorkQueue
         for(int i=0; i<10; i++){
             final int index = i;
             executorService.execute(new Runnable() {
@@ -30,5 +30,12 @@ public class ThreadPoolExecutorTest {
             });
         }
         executorService.shutdown();
+
+//        executorService.execute(Thread.currentThread());
     }
+
+
+
+
+
 }

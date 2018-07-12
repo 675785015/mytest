@@ -33,11 +33,11 @@ public class LockConditionTest {
 
     public void m2(){
         lock.lock();
-        System.out.println("当前线程："+ Thread.currentThread().getName()+"等待");
+        System.out.println("signal当前线程："+ Thread.currentThread().getName()+"等待");
         try {
             Thread.sleep(2000);
             condition.signal();
-            System.out.println("当前线程："+Thread.currentThread().getName()+"执行完成");
+            System.out.println("signal当前线程："+Thread.currentThread().getName()+"执行完成");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }        finally {

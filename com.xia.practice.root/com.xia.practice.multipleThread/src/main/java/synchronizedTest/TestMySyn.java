@@ -7,9 +7,7 @@ public class TestMySyn {
 
 
     /**
-
      *
-
      */
 
     public TestMySyn() {
@@ -20,14 +18,13 @@ public class TestMySyn {
 
     /**
      * @param args
-     * synchronized 不同对象不同锁
+     * synchronized 是对象锁，不同对象不同锁
+     * static synchronized method() 类锁
+     *
      */
-
-
     public static void main(String[] args) {
 
         final ObjectLock objectLock = new ObjectLock();
-// TODO Auto-generated method stub
 
         Thread t1 = new Thread(new Runnable() {
             @Override
@@ -46,5 +43,16 @@ public class TestMySyn {
         t2.start();
 
     }
+//    public static void main(String[] args) {
+//        for(int i = 0; i<5;i++){
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    new TestSyn().printOut();
+//                    System.out.println(Thread.currentThread().getName());
+//                }
+//            }).start();
+//        }
+//    }
 
 }

@@ -1,5 +1,7 @@
 package vector;
 
+import org.omg.PortableInterceptor.Current;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -19,7 +21,7 @@ public class TestVector {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-
+                    System.out.println("thread-" + Thread.currentThread().toString());
                 }
             }).start();
 

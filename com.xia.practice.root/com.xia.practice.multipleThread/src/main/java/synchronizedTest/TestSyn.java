@@ -5,9 +5,15 @@ package synchronizedTest;
  */
 public class TestSyn {
 
-    int a = 5;
+    static int a = 5;
 
-    public synchronized void printOut(){
+    /**
+     * 不同对象不同锁
+     * 如果添加static 就属于类锁了
+      */
+
+
+    public static synchronized void printOut(){
 
             System.out.println(--a);
     }
